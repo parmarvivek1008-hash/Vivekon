@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products – VIVEKÓN</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Photos/Fav.png"
+    />
+
+    <style>
+      body {
+        background: #f5f5f5;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #e9ecef;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #c7ced8, #b7c7df);
+        border-radius: 10px;
+        border: 2px solid #e9ecef;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #b5c5dc, #bbc2cd);
+      }
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #afbed5 #e9ecef;
+      }
+      .product-card {
+        border-radius: 15px;
+        overflow: hidden;
+        background: white;
+        transition: 0.3s;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      }
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+      .product-img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .category-bar {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+      }
+      .category-btn {
+        border-radius: 20px;
+      }
+      footer {
+        background: #2e2e2e;
+        color: white;
+        padding: 25px 0;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3 text-primary">VIVEKÓN</a>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto mb-2 gap-3">
+            <li><a class="nav-link" href="Index.html">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="Products.html">Products</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="Men.html">Men</a></li>
+            <li class="nav-item"><a class="nav-link" href="Women.html">Women</a></li>
+            <li class="nav-item"><a class="nav-link" href="Kids.html">Kids</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contactus.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="About.html">About Us</a></li>
+            <li class="nav-item">
+              <a class="btn btn-outline-primary" href="login.html">Login</a>
+            </li>
+            <li class="nav-item"><a class="btn btn-primary" href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="container text-center my-4 w-50 bg-white rounded p-1">
+      <h2 class="fw-bold">Our Latest Collection</h2>
+      <p class="text-muted">• Trendy • Stylish • Affordable Clothing</p>
+    </div>
+
+    <!-- CATEGORY FILTER BAR -->
+    <div class="container">
+      <div class="category-bar mb-4 d-flex flex-wrap justify-content-center gap-3">
+        <button class="btn btn-outline-primary category-btn px-4">All</button>
+        <button class="btn btn-outline-primary category-btn px-4">Men</button>
+        <button class="btn btn-outline-primary category-btn px-4">Women</button>
+        <button class="btn btn-outline-primary category-btn px-4">Kids</button>
+        <button class="btn btn-outline-primary category-btn px-4">Winter</button>
+        <button class="btn btn-outline-primary category-btn px-4">Summer</button>
+      </div>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Product 1 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/MenJacket.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Men Jacket</h5>
+              <p class="text-muted mb-1">Stylish winter wear</p>
+              <h6 class="fw-bold text-success">₹1299</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="101"
+                data-title="Stylish winter wear"
+                data-price="1299"
+                data-img="Photos/MenJacket.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/MenShirt.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Men Shirt</h5>
+              <p class="text-muted mb-1">Casual slim fit</p>
+              <h6 class="fw-bold text-success">₹799</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="102"
+                data-title="Men Shirt - Casual slim fit"
+                data-price="799"
+                data-img="Photos/MenShirt.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/WomenTop.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Women Top</h5>
+              <p class="text-muted mb-1">Soft & comfortable</p>
+              <h6 class="fw-bold text-success">₹599</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="103"
+                data-title="Women Top - Soft & comfortable"
+                data-price="599"
+                data-img="Photos/WomenTop.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/KidsHoodi.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Kids Hoodie</h5>
+              <p class="text-muted mb-1">Warm & soft</p>
+              <h6 class="fw-bold text-success">₹699</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="104"
+                data-title="Kids Hoodie - Warm & soft"
+                data-price="699"
+                data-img="Photos/KidsHoodi.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/WomenJacket.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Women Jacket</h5>
+              <p class="text-muted mb-1">Trendy winter wear</p>
+              <h6 class="fw-bold text-success">₹1499</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="105"
+                data-title="Women Jacket - Trendy winter wear"
+                data-price="1499"
+                data-img="Photos/WomenJacket.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/MenHoodi.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Men Hoodie</h5>
+              <p class="text-muted mb-1">Classic streetwear</p>
+              <h6 class="fw-bold text-success">₹999</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="106"
+                data-title="Men Hoodie - Classic streetwear"
+                data-price="999"
+                data-img="Photos/MenHoodi.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/PremiumDenimShirt.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Men Premium Denim Shirt</h5>
+              <p class="text-muted mb-1">Comfort & Stylish</p>
+              <h6 class="fw-bold text-success">₹2999</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="107"
+                data-title="Men Premium Denim Shirt - Comfort & Stylish"
+                data-price="2999"
+                data-img="Photos/PremiumDenimShirt.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/PremiumSatinTop.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Women Top</h5>
+              <p class="text-muted mb-1">Luxury Top</p>
+              <h6 class="fw-bold text-success">₹5999</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="108"
+                data-title="Women Top - Luxury Top"
+                data-price="5999"
+                data-img="Photos/PremiumSatinTop.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/ChexShirt.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Men Chex Shirt</h5>
+              <p class="text-muted mb-1">Casual & Comfortable</p>
+              <h6 class="fw-bold text-success">₹699</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="109"
+                data-title="Men Chex Shirt - Casual & Comfortable"
+                data-price="699"
+                data-img="Photos/ChexShirt.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/CuteYellowHoodie.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Kids Hoodie</h5>
+              <p class="text-muted mb-1">Soft & Stylish</p>
+              <h6 class="fw-bold text-success">₹799</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="110"
+                data-title="Kids Hoodie - Soft & Stylish"
+                data-price="799"
+                data-img="Photos/CuteYellowHoodie.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/MenPremiumFashion1.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Men Shirt</h5>
+              <p class="text-muted mb-1">Casual Shirt</p>
+              <h6 class="fw-bold text-success">₹1599</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="111"
+                data-title="Men Shirt - Casual Shirt"
+                data-price="1599"
+                data-img="Photos/MenPremiumFashion1.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="product-card">
+            <img src="Photos/ElegantFloralDress.jpg" class="product-img" />
+            <div class="p-3">
+              <h5 class="fw-bold">Elegant Floral Dress</h5>
+              <p class="text-muted mb-1">Comfortable & Trendy</p>
+              <h6 class="fw-bold text-success">₹1299</h6>
+
+              <a href="#" class="btn btn-outline-primary w-100 mt-2">View Details</a>
+
+              <button
+                class="btn btn-primary w-100 add-to-cart mt-2"
+                data-id="112"
+                data-title="Elegant Floral Dress - Comfortable & Trendy"
+                data-price="1299"
+                data-img="Photos/ElegantFloralDress.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+      <p class="mb-0">© 2025 VIVEKÓN All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", function () {
+          const product = {
+            id: this.dataset.id,
+            title: this.dataset.title,
+            price: parseInt(this.dataset.price),
+            img: this.dataset.img,
+            qty: 1,
+          };
+
+          let existing = cart.find((item) => item.id === product.id);
+
+          if (existing) {
+            existing.qty += 1;
+          } else {
+            cart.push(product);
+          }
+
+          localStorage.setItem("cart", JSON.stringify(cart));
+          alert(product.title + " added to cart!");
+        });
+      });
+    </script>
+  </body>
+</html>
